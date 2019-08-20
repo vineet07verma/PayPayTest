@@ -1,0 +1,15 @@
+{
+    "data": {
+        "id": 1,
+        "first_name": "Anil",
+        "last_name": "Sharma",
+        "role": "employee",
+        "email_id": "employee00001@portal.com",
+        "employee_code": "E-00001",
+        "status": true,
+        "username": "eanilsharma"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+    "statusCode": 200,
+    "message": "Record Fetched Successfuly"
+}

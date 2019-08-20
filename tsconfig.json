@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "pay-lib": [
+        "dist/pay-lib"
+      ],
+      "pay-lib/*": [
+        "dist/pay-lib/*"
+      ]
+    }
   }
 }

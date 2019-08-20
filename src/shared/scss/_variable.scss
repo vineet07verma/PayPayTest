@@ -1,0 +1,14 @@
+// Import material theming functions
+@import '../../pay-theme';
+
+$primary-color: map-get($mat-custom-primary, 500);
+$accent-color: map-get($mat-custom-accent, 500);
+$warn-color: map-get($custom-theme-warn, 500);
+$secondary-color: #bed600;
+$success-color: #024731;
+$default-color: #C4C4C4;
+$font-color: #67696d;
+$dark-color: #57584F;
+$font-din-cond-bold: 'Source Sans Pro Regular, Arial, sans-serif';
+$font-din-cond-medium: 'Source Sans Pro Regular, Arial, sans-serif';
+$font-din-bold: 'Source Sans Pro Regular, Arial, sans-serif';

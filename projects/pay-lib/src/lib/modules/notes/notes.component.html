@@ -1,0 +1,5 @@
+<div class="comment-box-container" *ngIf="!disabled">
+    <input type="text" #noteInput [placeholder]="placeholder" class="w-100 comment-box mb-2" (keyup.enter)="onNoteHandler()" />
+    <mat-icon class="submit-icon" matSuffix (click)="onNoteHandler()">send</mat-icon>
+</div>
+<app-note *ngFor="let note of notes" [note]="note"></app-note>

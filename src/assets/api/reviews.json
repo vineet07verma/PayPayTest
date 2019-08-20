@@ -1,0 +1,66 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Sharing Performance Review Format",
+            "primary_goal": "Make sure that you also share the performance review format with the employee, so she is not surprised at the end of the performance review time period. A significant component of this evaluation discussion is to share with the employee how your organization will assess performance.",
+            "secondary_goal": "Avoid the horns and halo effect in which everything discussed in the meeting involves positive and negative recent events. Recent events color your judgment of the employee’s performance. Instead, you are responsible for documenting positive occurrences such as completed projects, and negative occurrences such as a missed deadline, during the entire period of time that the performance review covers. ",
+            "employee_id": 2,
+            "employee_code": "E-00002",
+            "reviewer": "E-00002 Manish",
+            "complete_date": "2019-12-12",
+            "feedback": "",
+            "status": "Pending"
+        },
+        {
+            "id": 2,
+            "title": "Sharing Performance Review Format",
+            "primary_goal": "Make sure that you also share the performance review format with the employee, so she is not surprised at the end of the performance review time period. A significant component of this evaluation discussion is to share with the employee how your organization will assess performance.",
+            "secondary_goal": "Avoid the horns and halo effect in which everything discussed in the meeting involves positive and negative recent events. Recent events color your judgment of the employee’s performance. Instead, you are responsible for documenting positive occurrences such as completed projects, and negative occurrences such as a missed deadline, during the entire period of time that the performance review covers. ",
+            "employee_id": 2,
+            "employee_code": "E-00002",
+            "reviewer": "E-00002 Manish",
+            "complete_date": "2019-12-12",
+            "feedback": "",
+            "status": "Completed"
+        },
+        {
+            "id": 3,
+            "title": "Sharing Performance Review Format",
+            "primary_goal": "Make sure that you also share the performance review format with the employee, so she is not surprised at the end of the performance review time period. A significant component of this evaluation discussion is to share with the employee how your organization will assess performance.",
+            "secondary_goal": "Avoid the horns and halo effect in which everything discussed in the meeting involves positive and negative recent events. Recent events color your judgment of the employee’s performance. Instead, you are responsible for documenting positive occurrences such as completed projects, and negative occurrences such as a missed deadline, during the entire period of time that the performance review covers. ",
+            "employee_id": 2,
+            "employee_code": "E-00002",
+            "reviewer": "E-00002 Manish",
+            "complete_date": "2019-12-12",
+            "feedback": "",
+            "status": "Pending"
+        },
+        {
+            "id": 4,
+            "title": "Sharing Performance Review Format",
+            "primary_goal": "Make sure that you also share the performance review format with the employee, so she is not surprised at the end of the performance review time period. A significant component of this evaluation discussion is to share with the employee how your organization will assess performance.",
+            "secondary_goal": "Avoid the horns and halo effect in which everything discussed in the meeting involves positive and negative recent events. Recent events color your judgment of the employee’s performance. Instead, you are responsible for documenting positive occurrences such as completed projects, and negative occurrences such as a missed deadline, during the entire period of time that the performance review covers. ",
+            "employee_id": 2,
+            "employee_code": "E-00002",
+            "reviewer": "E-00002 Manish",
+            "complete_date": "2019-12-12",
+            "feedback": "",
+            "status": "Pending"
+        },
+        {
+            "id": 5,
+            "title": "Sharing Performance Review Format",
+            "primary_goal": "Make sure that you also share the performance review format with the employee, so she is not surprised at the end of the performance review time period. A significant component of this evaluation discussion is to share with the employee how your organization will assess performance.",
+            "secondary_goal": "Avoid the horns and halo effect in which everything discussed in the meeting involves positive and negative recent events. Recent events color your judgment of the employee’s performance. Instead, you are responsible for documenting positive occurrences such as completed projects, and negative occurrences such as a missed deadline, during the entire period of time that the performance review covers. ",
+            "employee_id": 2,
+            "employee_code": "E-00002",
+            "reviewer": "E-00002 Manish",
+            "complete_date": "2019-12-12",
+            "feedback": "",
+            "status": "Pending"
+        }
+    ],
+    "statusCode": 200,
+    "message": "Record Fetched Successfuly"
+}

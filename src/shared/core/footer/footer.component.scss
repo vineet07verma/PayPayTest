@@ -1,0 +1,66 @@
+@import '../../scss/variable';
+
+footer {
+    font-size: 14px;
+    padding-top: 20px;
+
+    .logo {
+        max-width: 100px;
+    }
+    
+    .nav {
+        li {
+            a {
+                padding: 0 1.5rem 0 0;
+                color: $font-color;
+                font-size: 1rem;
+            }
+        }
+    }
+ 
+    .social-media-container {
+        ul {
+            a {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .footer-legal {
+        border-top: 1px solid lighten($font-color, 40%);
+        padding-top: 30px;
+    }
+
+    .imp-links {
+        .nav {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    footer {
+        .social-media-container {
+            ul {
+                img {
+                    width: 42px;
+                }
+            }
+        }
+
+        .imp-links {
+            .nav {
+                li {
+                    a {
+                        padding: 0 0 0.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+}

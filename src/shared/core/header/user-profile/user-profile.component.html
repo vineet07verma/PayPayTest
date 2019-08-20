@@ -1,0 +1,20 @@
+<div class="user-profile-container">
+	<div class="user-profile d-flex justify-content-between align-items-center p-2">
+		<mat-icon class="mr-2">account_circle</mat-icon>
+		<div class="w-100 pt-2">
+			<p class="font-din-medium mb-0">{{authUserDetails.first_name}} {{authUserDetails.last_name}}</p>
+			<p class="mb-0">({{authUserDetails.role | uppercase}})</p>
+			<p class="mb-0 last-login">Email: {{authUserDetails.email_id}}</p>
+			<p class="signout d-flex align-items-center d-lg-none pt-2 mb-0" (click)="logout()">
+				<mat-icon class="mr-1">exit_to_app</mat-icon>
+				<span>Sign Out</span>
+			</p>
+		</div>
+	</div>
+
+	<hr class="my-1" />
+
+	<div class="actions px-3 py-2 d-none d-lg-flex justify-content-end">
+		<button type="button" mat-raised-button color="primary" class="rounded-0" (click)="logout()">Sign Out</button>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+// Import material theming functions
+@import './variable';
+
+.primary-color {
+    color: $primary-color;
+}
+
+.accent-color {
+    color: $accent-color;
+}
+
+.warn-color {
+    color: $warn-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}
+
+.success-color {
+    color: $success-color;
+}
+
+.white-color {
+    color: #fff !important;
+}
+
+.dark-color {
+    color: $dark-color;
+}

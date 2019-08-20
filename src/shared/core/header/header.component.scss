@@ -1,0 +1,22 @@
+.header-toolbar {
+    padding: 0px !important;
+
+    .navbar-brand {
+        img {
+            max-width: 100px;
+        }
+    }
+
+    .mat-icon {
+        font-size: 33px;
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        cursor: pointer;
+    }
+}
+
+.user-profile-menu {
+    width: 350px !important;
+    max-width: 350px !important;
+}

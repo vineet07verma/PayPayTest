@@ -1,0 +1,24 @@
+<div class="comment-inner-container py-3">
+	<div class="comment d-flex">
+		<img *ngIf="note.USER_IMAGE" [src]="note.USER_IMAGE" alt="" class="mr-3" />
+
+		<div *ngIf="!note.USER_IMAGE" class="user-image">{{note.USER_SHORT_NAME}}</div>
+
+		<div class="comment-description w-100">
+
+			<h5>{{note.FST_NAME}} {{note.LAST_NAME}}</h5>
+
+			<div class="date">
+				<p>{{note.CREATED_DT | date: 'MMM d, y, h:mm a'}}</p>
+			</div>
+
+			<div *ngIf="note.FROM_STATUS && note.TO_STATUS" class="d-flex justify-content-start align-items-center my-2">
+				<app-status-chip [status]="note.FROM_STATUS"></app-status-chip>
+					<mat-icon class="ml-1">arrow_forward</mat-icon>
+				<app-status-chip [status]="note.TO_STATUS"></app-status-chip>
+			</div>
+
+			<p class="user-comment my-2 d-inline-block">{{note.NOTE}}</p>
+		</div>
+	</div>
+</div>

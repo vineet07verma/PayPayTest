@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+}
+
+h1 {
+    font-size: 6.75rem;
+    line-height: .86;
+}
+
+h2 {
+    font-size: 4.75rem;
+}
+
+h3 {
+    font-size: 48px;
+}
+
+h4 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 767px) {
+    h4 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+button {
+    &:focus {
+        outline: 0 !important;
+    }
+}
+
+.button {
+    padding: 3px 35px !important;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+    font-size: 1rem !important;
+}
+
+.inner-container {
+    margin-top: 1.0rem;
+    margin-bottom: 1.5rem;
+}
+
+.list-container {
+    background-color: #fff;
+}
+
+.mat-table .mat-header-row .mat-header-cell {
+    font-weight: bold !important;
+}
+
+.mat-table .mat-icon {
+    z-index: 9999 !important;
+}

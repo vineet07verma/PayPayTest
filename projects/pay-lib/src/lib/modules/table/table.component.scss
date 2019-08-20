@@ -1,0 +1,116 @@
+.mat-table {
+    width: 100%;
+    font-size: 14px;
+
+    .mat-header-row {
+        .mat-header-cell {
+            font-size: 17px;
+            padding: 9px 7px;
+        }
+    }
+
+    .mat-row {
+        cursor: pointer;
+
+        .mat-cell {
+            word-break: break-word;
+            font-size: 15px;
+            padding: 0 7px;
+
+            &.clickable {
+                text-decoration: underline;
+            }
+        }
+        &:hover {
+            background-color: #E3E3E3;
+        }
+    }
+
+    .align-left {
+        text-align: left;
+    }
+    .align-right {
+        text-align: right;
+    }
+    .align-center {
+        text-align: center;
+    }
+}
+
+.mat-paginator {
+    background: none;
+    .mat-icon-button {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.editableTable {
+    .mat-row {
+        .mat-cell {
+            &:not(:first-child) {
+                padding: 0 5px;
+            }
+
+            .mat-form-field-wrapper {
+                padding-top: .5em;
+
+                .mat-form-field-infix {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 991px) {
+    .mat-table {
+        border: 0;
+        vertical-align: middle;
+
+        .mat-header-row  {
+            display: none;
+        }
+
+        .mat-row {
+            border-bottom: 5px solid #ddd;
+            min-height: 49px;
+            padding: 15px 15px 5px;
+            flex-direction: column;
+
+            .mat-cell {
+                border-bottom: 1px solid #ddd;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: right;
+                height: 40px;
+                font-size: 15px;
+                width: 100% !important;
+
+                &:before {
+                    content: attr(data-label);
+                    float: left;
+                    font-weight: bold;
+                    width: 110px;
+                    text-align: left;
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                    padding-right: 0 !important;
+                }
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<div class="container">
+	<alert-component *ngIf="alertData" [data]="alertData"></alert-component>
+	<form #userForm="ngForm" [formGroup]="userFormGroup" class="create-form py-2" (focusout)="onFocusOut()"
+		(ngSubmit)="onSubmit()">
+		<div class="row">
+			<div class="col-6">
+				<mat-form-field class="w-100">
+					<input type="hidden" id="rowId" formControlName="id">
+					<input matInput type="text" placeholder="First Name*" id="first_name" formControlName="first_name">
+					<mat-error *ngIf="formErrors['first_name']">{{formErrors['first_name']}}</mat-error>
+				</mat-form-field>
+				<mat-form-field class="w-100">
+					<input matInput type="text" formControlName="last_name" id="last_name" placeholder="Last Name*">
+					<mat-error *ngIf="formErrors['last_name']">{{formErrors['last_name']}}</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="w-100">
+					<input matInput type="text" formControlName="email_id" id="email_id" placeholder="Email Id">
+				</mat-form-field>
+
+				<mat-form-field class="w-100">
+					<input matInput type="number" id="employee_code" formControlName="employee_code"
+						placeholder="Employee Code">
+				</mat-form-field>
+			</div>
+			<div class="col-6">
+				<mat-form-field class="w-100">
+					<mat-label>Role*</mat-label>
+					<mat-select formControlName="role" id="role">
+						<mat-option *ngFor="let option of roles" [value]="option.value">{{option.key}}</mat-option>
+					</mat-select>
+					<mat-error *ngIf="formErrors['role']">{{formErrors['role']}}</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="w-100">
+					<input matInput type="text" id="Username" formControlName="username" placeholder="Username">
+				</mat-form-field>
+
+				<mat-form-field class="w-100">
+					<mat-label>Status</mat-label>
+					<mat-select formControlName="status" id="status">
+						<mat-option>None</mat-option>
+						<mat-option *ngFor="let option of statuses" [value]="option.value">
+							{{option.key}}
+						</mat-option>
+					</mat-select>
+				</mat-form-field>
+			</div>
+		</div>
+		<button type="submit" [disabled]="!userFormGroup.valid" mat-raised-button class="w-100 my-3 button"
+			[class.button-primary]="userFormGroup.valid">{{ userFormGroup.value['id'] ? 'Update' : 'Create' }}</button>
+	</form>
+</div>

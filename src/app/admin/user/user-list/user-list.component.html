@@ -1,0 +1,15 @@
+<div class="users">
+    <div class="container inner-container">
+        <div class="heading pb-3 d-flex justify-content-between">
+            <h5>Users Detail</h5>
+            <button mat-raised-button class="button" (click)="openUserDialog()" color="primary">Add</button>
+        </div>
+        <app-table *ngIf="tableData && tableData.length" 
+            [tableHeader]="tableHeaders" 
+            [tableData]="tableData"
+            [pageSize]="10" 
+            [hidePageSize]="true">
+        </app-table>
+        <p *ngIf="tableData.length === 0" class="text-center">NO RECORD FOUND!</p>
+    </div>
+</div>

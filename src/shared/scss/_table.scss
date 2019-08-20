@@ -1,0 +1,40 @@
+#tableResponsive {
+    font-size: 1rem;
+
+    tr {
+        border: 1px solid #ddd;
+
+        td {
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #tableResponsive {
+        .table-header {
+            display: none;
+        }
+        tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: 1.5rem;
+            background-color: #f8f8f8;
+        }
+        td {
+            display: block;
+            text-align: right;
+        }
+        td::before {
+            /*
+            * aria-label has no advantage, it won't be read inside a table
+            content: attr(aria-label);
+            */
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+    }
+}

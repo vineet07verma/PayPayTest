@@ -1,0 +1,55 @@
+<div class="container">
+	<alert-component *ngIf="alertData" [data]="alertData"></alert-component>
+	<form #performanceForm="ngForm" [formGroup]="performanceFormGroup" class="create-form py-2" (focusout)="onFocusOut()" (ngSubmit)="onSubmit()">
+		<div class="row">
+			<div class="col-6">
+				<mat-form-field class="w-100">
+					<input type="hidden" id="rowId" formControlName="id">
+					<input matInput type="text" placeholder="Title*" id="Title" formControlName="title">
+					<mat-error *ngIf="formErrors['title']">{{formErrors['title']}}</mat-error>
+				</mat-form-field>
+				<mat-form-field class="w-100">
+					<textarea matInput type="text" formControlName="primary_goal" id="primary_goal"
+						placeholder="Primary Goals*"></textarea>
+					<mat-error *ngIf="formErrors['primary_goal']">{{formErrors['primary_goal']}}</mat-error>
+				</mat-form-field>
+				<mat-form-field class="w-100">
+					<textarea matInput type="text" formControlName="secondary_goal" id="secondary_goal"
+						placeholder="Secondary Goals*"></textarea>
+				</mat-form-field>
+			</div>
+			<div class="col-6">
+				<mat-form-field class="w-100">
+					<mat-label>Employee*</mat-label>
+					<mat-select formControlName="employee_id" id="Employee">
+						<mat-option *ngFor="let option of employees" [value]="option.value">{{option.key}}</mat-option>
+					</mat-select>
+					<mat-error *ngIf="formErrors['employee_id']">{{formErrors['employee_id']}}</mat-error>
+				</mat-form-field>
+				<mat-form-field class="w-100">
+					<mat-label>Reviewer*</mat-label>
+					<mat-select formControlName="reviewer" id="reviewer">
+						<mat-option *ngFor="let option of employees" [value]="option.value">{{option.key}}</mat-option>
+					</mat-select>
+					<mat-error *ngIf="formErrors['reviewer']">{{formErrors['reviewer']}}</mat-error>
+				</mat-form-field>				
+				<mat-form-field class="w-100">
+					<input matInput formControlName="complete_date" [matDatepicker]="picker"
+						placeholder="Choose a date">
+					<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+					<mat-datepicker #picker></mat-datepicker>
+				</mat-form-field>
+				<mat-form-field class="w-100">
+					<mat-label>Status</mat-label>
+					<mat-select formControlName="status" id="status">
+						<mat-option>None</mat-option>
+						<mat-option *ngFor="let option of statuses" [value]="option.value">
+							{{option.key}}
+						</mat-option>
+					</mat-select>
+				</mat-form-field>
+			</div>
+		</div>
+		<button type="submit" [disabled]="!performanceFormGroup.valid" mat-raised-button class="w-100 my-3 button" color="primary" [class.button-primary]="performanceFormGroup.valid">{{ performanceFormGroup.value['id'] ? 'Update' : 'Create' }}</button>
+	</form>
+</div>

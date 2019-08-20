@@ -1,0 +1,43 @@
+<ng-container [ngSwitch]="data.type">
+	<ng-container *ngSwitchCase="BUTTON_TYPE.MAT_BUTTON">
+		<button class="lib-action-button" mat-button [color]="data.color" (click)="onButtonClickHandler($event, data); false">
+            {{data.label}}
+        </button>
+	</ng-container>
+
+	<ng-container *ngSwitchCase="BUTTON_TYPE.MAT_RAISED_BUTTON">
+		<button class="lib-action-button" mat-raised-button [color]="data.color" (click)="onButtonClickHandler($event, data); false">
+			{{data.label}}
+		</button>
+	</ng-container>
+
+	<ng-container *ngSwitchCase="BUTTON_TYPE.MAT_STROKED_BUTTON">
+		<button class="lib-action-button" mat-stroked-button [color]="data.color" (click)="onButtonClickHandler($event, data); false">
+			{{data.label}}
+		</button>
+	</ng-container>
+
+	<ng-container *ngSwitchCase="BUTTON_TYPE.MAT_FLAT_BUTTON">
+		<button class="lib-action-button" mat-flat-button [color]="data.color" (click)="onButtonClickHandler($event, data); false">
+				{{data.label}}
+			</button>
+	</ng-container>
+
+	<ng-container *ngSwitchCase="BUTTON_TYPE.MAT_LINK_BUTTON">
+		<a class="lib-action-button link" mat-flat-button [color]="data.color" [disableRipple]="false" (click)="onButtonClickHandler($event, data); false">
+			{{data.label}}
+		</a>
+	</ng-container>
+
+	<ng-container *ngSwitchCase="BUTTON_TYPE.MAT_ICON_BUTTON">
+		<button class="lib-action-button icon-button" mat-icon-button [color]="data.color" (click)="onButtonClickHandler($event, data); false">
+			<mat-icon>{{data.icon}}</mat-icon>
+		</button>
+	</ng-container>
+
+	<ng-container *ngSwitchDefault>
+		<button class="lib-action-button" mat-button [color]="data.color" (click)="onButtonClickHandler($event, data); false">
+			{{data.label}}
+		</button>
+	</ng-container>
+</ng-container>

@@ -1,0 +1,77 @@
+.comment-inner-container {
+    .comment {
+        h5 {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+        .user-image {
+            background-color: #ccc;
+            border-radius: 40px;
+            width: 43px;
+            height: 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .user-comment {
+            font-size: 16px;
+            background-color: #efefef;
+            padding: 5px 15px;
+            border-radius: 25px;
+        }
+
+        .mat-icon {
+            font-size: 16px;
+            width: 19px;
+            height: 19px;
+        }
+
+        .like,
+        .reply,
+        .date {
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+        }
+
+        .like {
+            cursor: pointer;
+
+            &.active {
+                color: #007bff;
+            }
+
+            p {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+
+        .reply {
+            cursor: pointer;
+
+            p {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        img {
+            max-width: 40px;
+            max-height: 40px;
+            border-radius: 40px;
+        }
+    }
+
+    .reply-container {
+        .comment {
+            border-top: solid 1px #e8e8e8;
+        }
+    }
+}

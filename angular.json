@@ -27,6 +27,9 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/pay-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -87,9 +90,15 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/pay-theme.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+							"./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
@@ -118,6 +127,42 @@
           }
         }
       }
-    }},
+    },
+    "pay-lib": {
+      "projectType": "library",
+      "root": "projects/pay-lib",
+      "sourceRoot": "projects/pay-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pay-lib/tsconfig.lib.json",
+            "project": "projects/pay-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pay-lib/src/test.ts",
+            "tsConfig": "projects/pay-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/pay-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pay-lib/tsconfig.lib.json",
+              "projects/pay-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "PerformanceReview"
 }

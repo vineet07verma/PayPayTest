@@ -1,0 +1,36 @@
+@import '../../../scss/variable';
+
+@media screen and (max-width: 991px) {
+    #navigation {
+        min-width: 250px;
+        padding: 0 20px;
+
+        .nav-link {
+            font-size: 18px;
+            height: 60px;
+            .mat-list-item-content {
+               border-bottom: 1px solid #ccc;
+               padding: 20px 15px 20px 15px !important;
+               text-transform: capitalize;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nav-link {
+        &:focus {
+            background: transparent !important;
+        }
+        .mat-list-item-content {
+            padding: 0 28px !important;
+            text-transform: capitalize;
+        }
+        &.active {
+            border-bottom: solid 3px $primary-color;
+            &:hover {
+                border-bottom: solid 3px $primary-color;
+            }
+        }
+    }
+}

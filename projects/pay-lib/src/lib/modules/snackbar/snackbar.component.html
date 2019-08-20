@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="row justify-content-between">
+        <span class="snackbar" class="message">
+            {{options.message}}
+        </span>
+        <span class="action" (click)="onActionClicked()" *ngIf="options.action">{{options.action.title}}</span>
+    </div>
+</div>

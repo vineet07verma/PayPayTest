@@ -1,0 +1,23 @@
+<mat-toolbar class="header-toolbar" *ngIf="isLoggedIn">
+	<nav class="navbar navbar-expand-lg navbar-light container">
+		<a class="navbar-brand" routerLink="/">
+			<img src="/assets/images/logo.png" alt="Portal" title="Portal" />
+		</a>
+
+		<div class="collapse navbar-collapse">
+			<app-nav class="mr-auto"></app-nav>
+		</div>
+
+		<div class="d-flex align-items-center">
+			<ng-container>
+				<!-- <mat-icon class="mx-2">search</mat-icon> -->
+				<mat-icon class="mx-2 d-none d-lg-block" [matMenuTriggerFor]="menu">account_circle</mat-icon>
+				<mat-menu #menu="matMenu" class="user-profile-menu rounded-0">				
+					<app-user-profile></app-user-profile>
+				</mat-menu>
+			</ng-container>
+
+			<mat-icon *ngIf="isShowHammBurgerMenu" class="d-block d-lg-none" (click)="toggleSideNav()">menu</mat-icon>
+		</div>
+	</nav>
+</mat-toolbar>

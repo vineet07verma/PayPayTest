@@ -1,0 +1,16 @@
+<mat-form-field class="w-100">
+	<mat-select
+		#element
+		[formControl]="formControl" 
+		[placeholder]="editPlaceholder"
+		[errorStateMatcher]="validate"
+		(openedChange)="openedChanged($event, element)"
+		(selectionChange)="onChange($event.value, element)">
+		<mat-option [value]="option.value" *ngFor="let option of editOptions">
+			{{option.label}}
+		</mat-option>
+	</mat-select>	
+	<mat-error *ngIf="editError">
+		{{editError}}
+	</mat-error>
+</mat-form-field>

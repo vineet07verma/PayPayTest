@@ -1,0 +1,12 @@
+<app-comment *ngFor="let comment of comments"
+    [comment]="comment"
+    [likeRequired]="likeRequired"
+    [replyRequired]="replyRequired"
+    (onReplyPublished)="onReplyHandler($event)" 
+    (onLiked)="onLikedHandler($event)">
+</app-comment>
+
+<div class="comment-box-container mt-4">
+    <input type="text" #commentInput [placeholder]="commentPlaceholder" class="w-100 comment-box" (keyup.enter)="onCommentHandler()" />
+    <mat-icon class="submit-icon" matSuffix (click)="onCommentHandler()">send</mat-icon>
+</div>

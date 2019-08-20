@@ -1,0 +1,9 @@
+<mat-sidenav-container class="sidenav-container" (backdropClick)="close()">
+	<mat-sidenav #sidenav (keydown.escape)="close()" [position]="options.position" [fixedInViewport]="true" disableClose>
+		<ng-template #target></ng-template>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<ng-content select="[content]"></ng-content>
+	</mat-sidenav-content>
+</mat-sidenav-container>

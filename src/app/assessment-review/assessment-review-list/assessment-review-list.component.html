@@ -1,0 +1,16 @@
+<div class="users">
+    <div class="container inner-container">
+        <div class="heading pb-3 d-flex justify-content-between">
+            <h5>Pending Reviews</h5>
+        </div>
+        <app-table *ngIf="tableData && tableData.length" 
+            [tableHeader]="tableHeaders" 
+            [tableData]="tableData"
+            [pageSize]="10" 
+            [hidePageSize]="true"
+            (onRowClicked)="onRowClicked($event)"
+            >
+        </app-table>
+        <p *ngIf="tableData.length === 0" class="text-center">NO RECORD FOUND!</p>
+    </div>
+</div>

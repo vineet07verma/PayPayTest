@@ -1,0 +1,22 @@
+@import '../../../shared/scss/variable';
+
+.content {
+    background-image: url("../../../assets/images/bg.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+
+    .login-form-container {
+        background-color: #fff;
+        padding: 25px;
+    
+        a {
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

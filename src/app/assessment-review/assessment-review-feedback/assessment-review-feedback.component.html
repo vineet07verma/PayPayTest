@@ -1,0 +1,28 @@
+<div class="review-details">
+	<div class="px-1 pb-5">
+		<p class="text-right small mb-2">Review Status: <strong>{{data.status}}</strong></p>
+		<div class="mb-5">
+			<h5>Review Title</h5>
+			<p>{{data.title}}</p>
+		</div>
+
+		<div class="mb-5">
+			<h5>Primary Goals</h5>
+			<p>{{data.primary_goal}}</p>
+		</div>
+
+		<div class="mb-5">
+			<h5>Secondary Goals</h5>
+			<p>{{data.secondary_goal}}</p>
+		</div>
+
+		<div class="mb-5">
+			<h5>Performance of Employee</h5>
+			<p>{{data['employee_code']}}</p>
+		</div>
+		<div class="mb-5">
+			<h5>Completed Till Date</h5>
+			<p>{{data.complete_date | date}}</p>
+		</div>
+	</div>
+</div>

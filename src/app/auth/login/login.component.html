@@ -1,0 +1,21 @@
+<div class="content">
+	<div class="container">
+		<div class="login-form-container mx-auto w-50 mt-5">
+			<h5 class="font-din-medium">WELCOME</h5>
+			<form class="login-form py-2" (focusout)="onFocusOut()" [formGroup]="loginForm" (ngSubmit)="submit()">
+				<mat-form-field class="w-100">
+					<input matInput placeholder="Username" id="username" formControlName="username" autocomplete="off">
+					<mat-error *ngIf="formErrors.username">{{ formErrors.username }}</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="w-100">
+					<input matInput type="password" placeholder="Password" id="password" formControlName="password"
+						autocomplete="off">
+					<mat-error *ngIf="formErrors.password">{{ formErrors.password }}</mat-error>
+				</mat-form-field>
+
+				<button mat-raised-button class="w-100 my-3 button" color="primary" [disabled]="!loginForm.valid">LOGIN</button>
+			</form>
+		</div>
+	</div>
+</div>

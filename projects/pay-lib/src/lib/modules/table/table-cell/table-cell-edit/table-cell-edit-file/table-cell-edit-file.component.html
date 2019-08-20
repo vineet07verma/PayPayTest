@@ -1,0 +1,8 @@
+<button type="button" mat-raised-button color="default" (click)="element.click()">{{editPlaceholder}}</button>
+<input
+	hidden
+	#element
+	type="file"
+	[formControl]="formControl"
+	(change)="onChange($event.target.files[0], element)">
+<span class="pl-2" *ngIf="editData && editData.name">{{editData.name}}</span>

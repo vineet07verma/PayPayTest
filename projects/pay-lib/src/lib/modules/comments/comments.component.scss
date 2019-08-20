@@ -1,0 +1,26 @@
+.comment-container {
+    border-bottom: solid 1px #e8e8e8;
+    display: block;
+}
+
+.comment-box-container {
+    position: relative;
+
+    .comment-box {
+        border-radius: 20px;
+        border: solid 1px #ccc;
+        padding: 12px 36px 12px 15px;
+    
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    .submit-icon {
+        position: absolute;
+        right: 12px;
+        top: 13px;
+        color: #bdbdbd;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,16 @@
+.notification {
+    position: relative;
+    padding-top: 10px;
+    .icon {
+        font-size: 30px;
+        height: 30px;
+        width: 32px;
+    }
+    .counter {
+        position: absolute;
+        right: 8px;
+        color: #fff;
+        top: 14px;
+        font-size: 12px
+    }
+}

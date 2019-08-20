@@ -1,0 +1,15 @@
+<mat-form-field class="w-100">
+	<input
+		#element
+		matInput 
+		type="text"
+		[formControl]="formControl"
+		[errorStateMatcher]="validate"
+		[placeholder]="editPlaceholder"
+		(blur)="onBlur($event.target.value, element)"
+		(change)="onChange($event.target.value, element)"
+		(focus)="onFocus($event.target.value, element)">
+		<mat-error *ngIf="editError">
+			{{editError}}
+		</mat-error>
+</mat-form-field>

@@ -1,0 +1,10 @@
+.mat-drawer {
+    width: 80%;
+}
+.mat-drawer-content {
+    overflow: hidden !important;
+    min-height: calc(100vh - 60px);
+}
+.mat-drawer-backdrop {
+    position: fixed !important;
+}

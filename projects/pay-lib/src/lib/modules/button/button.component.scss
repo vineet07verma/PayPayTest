@@ -1,0 +1,16 @@
+.lib-action-button {
+    margin-right: 5px;
+    border-radius: 0;
+    
+    &.link {
+        background: transparent;
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    &.icon-button {
+        text-align: right;
+        width: auto;
+    }
+}

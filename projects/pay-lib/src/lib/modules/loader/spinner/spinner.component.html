@@ -1,0 +1,7 @@
+<div id="spinner" *ngIf="isSpinnerVisible">
+    <div class="three-bounce" [class.colored]="!backgroundColor">
+        <div class="child bounce1" [style.background-color]='backgroundColor'></div>
+        <div class="child bounce2" [style.background-color]='backgroundColor'></div>
+        <div class="child bounce3" [style.background-color]='backgroundColor'></div>
+    </div>
+</div>

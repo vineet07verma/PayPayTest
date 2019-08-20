@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "first_name": "Anil",
+            "last_name": "Sharma",
+            "role": "employee",
+            "email_id": "employee00001@portal.com",
+            "employee_code": "E-00001",
+            "status": true,
+            "username": "eanilsharma"
+        },
+        {
+            "id": 2,
+            "first_name": "Mahesh",
+            "last_name": "Sharma",
+            "role": "employee",
+            "email_id": "employee00002@portal.com",
+            "employee_code": "E-00002",
+            "status": true,
+            "username": "emaheshsharma"
+        },
+        {
+            "id": 3,
+            "first_name": "System",
+            "last_name": "Admin",
+            "role": "admin",
+            "email_id": "employee00003@portal.com",
+            "employee_code": "E-00003",
+            "status": true,
+            "username": "eadminsharma"
+        },
+        {
+            "id": 1,
+            "first_name": "Pawan",
+            "last_name": "Sharma",
+            "role": "employee",
+            "email_id": "employee00004@portal.com",
+            "employee_code": "E-00004",
+            "status": true,
+            "username": "epawansharma"
+        },
+        {
+            "id": 1,
+            "first_name": "John",
+            "last_name": "Sharma",
+            "role": "employee",
+            "email_id": "employee00005@portal.com",
+            "employee_code": "E-00005",
+            "status": true,
+            "username": "ejohnsharma"
+        }
+    ],
+    "statusCode": 200,
+    "message": "Record Fetched Successfuly"
+}

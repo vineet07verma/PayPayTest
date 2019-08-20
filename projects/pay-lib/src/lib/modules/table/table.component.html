@@ -1,0 +1,75 @@
+<div class="mat-table lib-table">
+    <ng-container *ngIf="pagination && paginationTopPosition">
+        <mat-paginator [length]="dataCount" [pageIndex]="pageIndex" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+    </ng-container>
+
+    <mat-table [dataSource]="dataSource" matSort [matSortActive]="currentSort.active" [matSortDirection]="currentSort.direction" [trackBy]="trackBy" [class.editableTable]="editableTable">
+        <ng-container *ngFor="let header of tableHeader; let i = index" [matColumnDef]="(header.orderField) ? removeSpaces(header.orderField) : removeSpaces(header.field)">
+            <!-- If sorting required -->
+            <ng-container *ngIf="sorting">
+                <!-- If sorting required is false at header/column level -->
+                <ng-container *ngIf="!header.sortingRequired">
+                    <mat-header-cell *matHeaderCellDef [style.flex-basis]="getHeaderWidth(header)" [ngClass]="getAlignClass(header)">
+                        {{header.label}}
+                    </mat-header-cell>
+                </ng-container>
+
+                <!-- If sorting required at header/column level -->
+                <ng-container *ngIf="header.sortingRequired">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header [style.flex-basis]="getHeaderWidth(header)" [ngClass]="getAlignClass(header)">
+                        {{header.label}}
+                    </mat-header-cell>
+                </ng-container>
+            </ng-container>
+
+            <!-- If sorting not required -->
+            <ng-container *ngIf="!sorting">
+                <mat-header-cell *matHeaderCellDef 
+                    [style.flex-basis]="getHeaderWidth(header)" 
+                    [ngClass]="getAlignClass(header)">
+                    {{header.label}}
+                </mat-header-cell>
+            </ng-container>
+
+            <ng-container>
+                <mat-cell *matCellDef="let row" 
+                    [attr.data-label]="header.label"
+                    [style.flex-basis]="getHeaderWidth(header)" 
+                    [ngClass]="getAlignClass(header)" 
+                    [class.clickable]="header.cellClickable" 
+                    (click)="(header.cellClickable) ? handleCellClick(header.field, row[header.field]) : true">
+                    <app-table-cell
+                        [cellHeader]="header"
+                        [rowData]="row"
+                        [editableTable]="editableTable"
+                        (onFieldEvent)="fieldEvent($event)"></app-table-cell>
+                </mat-cell>
+            </ng-container>
+        </ng-container>
+
+        <!-- if editable table than adding action header -->
+        <ng-container *ngIf="editableTable" matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell *matCellDef="let row; let i = index">
+                <mat-menu #actionMenu="matMenu">
+                    <button mat-menu-item 
+                        (click)="singleClick(action, row)" 
+                        *ngFor="let action of singleActions" [disabled]="action.disabled">
+                        {{action.label}}
+                    </button>
+                </mat-menu>
+
+                <button type="button" mat-icon-button [matMenuTriggerFor]="actionMenu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="getTableHeaderRowDef()"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: getTableHeaderRowDef();" [class.selected]="row.selected" (click)="(rowClickable) ? handleRowClick(row) : true"></mat-row>
+    </mat-table>
+
+    <ng-container *ngIf="pagination && !paginationTopPosition">
+        <mat-paginator [hidePageSize]="hidePageSize" [length]="dataCount" [pageIndex]="pageIndex" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+    </ng-container>
+</div>
