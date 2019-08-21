@@ -27,6 +27,7 @@ export class AssessmentReviewFeedbackComponent implements OnInit {
 	updateReview(feedback: string) {
 		this.data.feedback = feedback;
 		this.data.status = 'Completed';
+		console.log(this.data);
 		this.performanceReviewService.update(this.data).subscribe(
 			res => {
 				if (res['statusCode'] === 200) {

@@ -17,7 +17,7 @@ export class PerformanceReviewListComponent implements OnInit {
 	tableHeaders: Array<ITableHeaderItem> = [
 		{ label: 'Title', field: 'title', align: ALIGNMENT.LEFT, width: '20%' },
 		{ label: 'Primary Goals', field: 'exercpt_primary_goal', sortingRequired: true, align: ALIGNMENT.LEFT, width: '15%' },
-		{ label: 'Secondary Goals', field: 'exercpt_secondary_goal', sortingRequired: true, align: ALIGNMENT.LEFT, width: '15%' },
+		{ label: 'Secondary', field: 'exercpt_secondary_goal', sortingRequired: true, align: ALIGNMENT.LEFT, width: '15%' },
 		{ label: 'Employee', field: 'employee_code', sortingRequired: true, align: ALIGNMENT.LEFT, width: '12%' },
 		{ label: 'Reviewer', field: 'reviewer', sortingRequired: true, align: ALIGNMENT.LEFT, width: '12%' },
 		{ label: 'Completed Date', field: 'complete_date', align: ALIGNMENT.LEFT, sortingRequired: true, width: '15%' },

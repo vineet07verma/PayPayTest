@@ -18,6 +18,9 @@ export class AuthService {
 	login(data): Observable<any> {
         return this.http.get(URL_CONFIG.loginAPI).pipe(
 			map(res => {
+                if(data['username'] === 'admin') {
+                    res['data']['role'] = 'Admin'
+                }
                 this.authenticationService.setAuthDetails(res['token'], res['data']);
                 return res;
             }),

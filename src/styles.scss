@@ -73,6 +73,9 @@ button {
     font-weight: bold !important;
 }
 
-.mat-table .mat-icon {
-    z-index: 9999 !important;
+.mat-table .mat-row .mat-cell {
+    z-index: 9999; 
+    .mat-icon {
+        z-index: 99999;
+    }
 }

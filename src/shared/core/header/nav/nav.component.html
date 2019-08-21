@@ -1,10 +1,9 @@
 <div class="text-right d-block d-lg-none mb-2 pt-3 pr-3" *ngIf="!isLoggedIn">
 	<mat-icon class="material-icons clear-icon" (click)="closeSideNav()">clear</mat-icon>
 </div>
-
 <mat-nav-list id="navigation" class="flex-column flex-lg-row d-flex pt-0">
 	<ng-container *ngIf="isLoggedIn">
-		<ng-container *ngIf="role==='Admin'">
+		<ng-container *ngIf="role ==='Admin'">
 			<a mat-list-item class="nav-link" routerLinkActive="active" routerLink="/admin/user/list" [routerLinkActiveOptions]="{ exact: true }">Users</a>
 			<a mat-list-item class="nav-link" routerLinkActive="active" routerLink="/admin/reviews/list" [routerLinkActiveOptions]="{ exact: true }">Performance Reviews</a>
 		</ng-container>

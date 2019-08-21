@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
 
 	ngOnInit() {
 		this.isLoggedIn = this.authenticationService.isLoggedIn;
-		this.role = this.authenticationService.role;
+		this.role = this.authenticationService.getAuthUser().role;
 	}
 
 	closeSideNav() {
