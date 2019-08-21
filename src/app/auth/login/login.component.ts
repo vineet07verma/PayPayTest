@@ -77,7 +77,11 @@ export class LoginComponent implements OnInit {
 		this.authService.login(this.loginForm.value).subscribe(
 			res => {
 				if(res['statusCode'] === 200) {
-					this.router.navigateByUrl('/admin');
+					if(res['data']['role'] === 'Admin') {
+						this.router.navigateByUrl('/admin');
+					} else {
+						this.router.navigateByUrl('/reviews');
+					}
 				}
 			}
 		)

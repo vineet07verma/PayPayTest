@@ -70,6 +70,9 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad, Resolv
 	}
 
 	isAllowed(url: string): boolean {
+		if(url.indexOf('admin') !== -1 && this.authenticationService.getAuthUser().role !== 'Admin') {
+			return false;
+		}
 		// for RBAC to implement
 		return true;
 	}
